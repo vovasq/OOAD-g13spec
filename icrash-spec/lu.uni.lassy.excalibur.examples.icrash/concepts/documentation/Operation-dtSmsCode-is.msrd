@@ -1,11 +1,11 @@
 /*
-@author kirill
-@date Sun Dec 18 12:48:51 MSK 2016
+@author Vovas
+@date Mon Dec 05 19:09:00 MSK 2016
 */
 
 
 @@Operation
-icrash.concepts.secondarytypes.datatypes.dtSMSHumanNotify.is
+icrash.concepts.primarytypes.datatypes.dtSmsCode.is
 @description "
  "
 //postFunctional descriptions

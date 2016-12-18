@@ -1,7 +1,8 @@
 package icrash.usecases.ugSecurelyUseSystem {
-
+ 
 import icrash.environment
 import icrash.usecases.subfunctions
+
 
 Use Case Model {
 
@@ -11,15 +12,20 @@ use case system usergoal
 	actor actAuthenticated[primary,active]
 
 	reuse oeLogin[1..1]
+	reuse oeLoginBySms[1..1]
 	reuse oeLogout[1..1]
 
 	step a: actAuthenticated 
 	     executes oeLogin
 	step b: actAuthenticated 
+	     executes oeLoginBySms
+	step c: actAuthenticated 
 	     executes oeLogout
 	
 	ordering constraint 
 	 "step (a) must always precede step (b)."
+	 // i have to (c) only after (b)
+	 
 		}
 	}
 }

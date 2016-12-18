@@ -8,9 +8,6 @@
 @variable
 Creator:icrash.environment.actMsrCreator
 "only actMsrtCreator actors can trigger the system and environment creation and initialization."
-@variable
-AqtyComCompanies : lu.uni.lassy.messir.libraries.primitives.ptInteger
-" "
 @endVariables
 @constraint 
 "the number of communication company actor instances present in the environment is equal to four to represent all the communication companies available in Luxembourg."
@@ -25,14 +22,11 @@ AqtyComCompanies : lu.uni.lassy.messir.libraries.primitives.ptInteger
 @variable
 TheActor:actActivator
 "proactive actor responsible of requesting the update of the system's clock."
-@variable
-ACurrentClock : lu.uni.lassy.messir.libraries.calendar.dtDateAndTime
-" "
 @endVariables
 @constraint
 "TheActor is any instance existing in the current environment status."
 @constraint
-"ACurrentClock is a fixed date equal to the 24th November 2017 at 15:20:00 using a 24-hours notation~\footnote{for more details see the ISO 8601 Data elements and interchange formats – Information interchange – Representation of dates and times - http://www.iso.org/iso/home/standards/iso8601.htm}."
+"ACurrentClock is a fixed date equal to the 24th November 2017 at 15:20:00 using a 24-hours notation~\footnote{for more details see the ISO 8601 Data elements and interchange formats - Information interchange - Representation of dates and times - http://www.iso.org/iso/home/standards/iso8601.htm}."
 @endConstraints
 @oracleConstraint 
 "true for testing only the executability (is available and can be triggered) of the operation."
@@ -45,12 +39,6 @@ ACurrentClock : lu.uni.lassy.messir.libraries.calendar.dtDateAndTime
 @variable
 TheActor:actAdministrator
 "an actAdministor actor as subtype of actAuthenticated can send oeLogin messages to the system."
-@variable
-AdtLogin : icrash.concepts.primarytypes.datatypes.dtLogin
-" "
-@variable
-AdtPassword : icrash.concepts.primarytypes.datatypes.dtPassword
-" "
 @endVariables
 @constraint
 "TheActor is any \msrcode{actAdministrator} instance existing in the environment. It is thus expected that there exist at least one."
@@ -59,10 +47,6 @@ AdtPassword : icrash.concepts.primarytypes.datatypes.dtPassword
 @constraint
 "AdtPassword has its value attribute equal to the primitive string '7WXC1359' (which is the correct administrator password known by the system after the step one.)"
 @endConstraints
-@oracleVariable
-AMessage : lu.uni.lassy.messir.libraries.primitives.ptString
-" "
-@endOracleVariables
 @oracleConstraint 
 "the \msrcode{AMessage} value is expected to be equal to the primitive string 'You are logged ! Welcome ...'"
 @oracleConstraint
@@ -76,15 +60,6 @@ AMessage : lu.uni.lassy.messir.libraries.primitives.ptString
 @variable
 TheActor:actAdministrator
 "actAdministor actors as being the only one allowed to add coordinators."
-@variable
-AdtCoordinatorID : icrash.concepts.primarytypes.datatypes.dtCoordinatorID
-" "
-@variable
-AdtLogin : icrash.concepts.primarytypes.datatypes.dtLogin
-" "
-@variable
-AdtPassword : icrash.concepts.primarytypes.datatypes.dtPassword
-" "
 @endVariables
 @constraint
 "TheActor is any \msrcode{actAdministrator} instance existing in the environment. It is expected that there exists at least one which is the same during all the test case."
@@ -110,10 +85,6 @@ TheActor:actAdministrator
 @constraint
 "TheActor is any \msrcode{actAdministrator} instance existing in the environment. It is expected that there exists at least one which is the same during all the test case."
 @endConstraints
-@oracleVariable
-AMessage : lu.uni.lassy.messir.libraries.primitives.ptString
-" "
-@endOracleVariables
 @oracleConstraint
 "the \msrcode{AMessage} value is expected to be equal to the primitive string 'You are logged out ! Good Bye ...'"
 @oracleConstraint
@@ -126,9 +97,6 @@ AMessage : lu.uni.lassy.messir.libraries.primitives.ptString
 @variable
 TheActor:icrash.environment.actActivator
 "proactive actors responsible of requesting the update of the system's clock."
-@variable
-ACurrentClock : lu.uni.lassy.messir.libraries.calendar.dtDateAndTime
-" "
 @endVariables
 @constraint
 "TheActor is any instance existing in the current environment status."
@@ -146,24 +114,6 @@ ACurrentClock : lu.uni.lassy.messir.libraries.calendar.dtDateAndTime
 @variable
 TheActor:actComCompany
 "actComCompany actors transfer alert declaration messages."
-@variable
-AetHumanKind : icrash.concepts.primarytypes.datatypes.etHumanKind
-" "
-@variable
-AdtDate : lu.uni.lassy.messir.libraries.calendar.dtDate
-" "
-@variable
-AdtTime : lu.uni.lassy.messir.libraries.calendar.dtTime
-" "
-@variable
-AdtPhoneNumber : icrash.concepts.primarytypes.datatypes.dtPhoneNumber
-" "
-@variable
-AdtGPSLocation : icrash.concepts.primarytypes.datatypes.dtGPSLocation
-" "
-@variable
-AdtComment : icrash.concepts.primarytypes.datatypes.dtComment
-" "
 @endVariables
 @constraint
 "TheActor is any instance existing in the current environment status. It is expected to exist at least one."
@@ -180,10 +130,6 @@ AdtComment : icrash.concepts.primarytypes.datatypes.dtComment
 @constraint
 "AdtComment is equal to '3 cars involved in an accident.'"
 @endConstraints
-@oracleVariable
-AdtSMS : icrash.concepts.secondarytypes.datatypes.dtSMS
-" "
-@endOracleVariables
 @oracleConstraint
 "AdtSMS is equal to the ptString 'Your alert has been registered. We will handle it and keep you informed'."
 @oracleConstraint
@@ -196,9 +142,6 @@ AdtSMS : icrash.concepts.secondarytypes.datatypes.dtSMS
 @variable
 TheActor:actActivator
 "proactive actor responsible of requesting the update of the system's clock."
-@variable
-ACurrentClock : lu.uni.lassy.messir.libraries.calendar.dtDateAndTime
-" "
 @endVariables
 @constraint
 "TheActor is any instance existing in the current environment status."
@@ -245,12 +188,6 @@ AMessageForCrisisHandlers:ptString
 @variable
 TheActor:actCoordinator
 "an actCoordinator actor as subtype of actAuthenticated can send oeLogin messages to the system."
-@variable
-AdtLogin : icrash.concepts.primarytypes.datatypes.dtLogin
-" "
-@variable
-AdtPassword : icrash.concepts.primarytypes.datatypes.dtPassword
-" "
 @endVariables
 @constraint
 "TheActor is any \msrcode{actAdministrator} instance existing in the environment. It is thus expected that there exist at least one."
@@ -259,10 +196,6 @@ AdtPassword : icrash.concepts.primarytypes.datatypes.dtPassword
 @constraint
 "AdtPassword has its value attribute equal to the primitive string '7WXC1359' (which is the correct administrator password known by the system after the step one.)"
 @endConstraints
-@oracleVariable
-AMessage : lu.uni.lassy.messir.libraries.primitives.ptString
-" "
-@endOracleVariables
 @oracleConstraint 
 "the \msrcode{AMessage} value is expected to be equal to the primitive string 'You are logged ! Welcome ...'"
 @endOracleConstraints
@@ -285,10 +218,6 @@ ActCrisis:icrash.concepts.primarytypes.classes.ctCrisis
 @constraint
 "AetCrisisStatus value is pending"
 @endConstraints
-@oracleVariable
-ActCrisis : icrash.concepts.primarytypes.classes.ctCrisis
-" "
-@endOracleVariables
 @oracleConstraint
 "ActCrisis is any ctCrisis instance that has been sent to TheActor."
 @endOracleConstraints
@@ -334,25 +263,6 @@ ActAlert:icrash.concepts.primarytypes.classes.ctAlert
 "AdtSMS has for value the string 'The handling of your alert by our services is in progress !'
 "
 @endConstraints
-@oracleVariable
-AMessage : lu.uni.lassy.messir.libraries.primitives.ptString
-" "
-@oracleVariable
-AdtPhoneNumber : icrash.concepts.primarytypes.datatypes.dtPhoneNumber
-" "
-@oracleVariable
-AdtSMS : icrash.concepts.secondarytypes.datatypes.dtSMS
-" "
-@oracleVariable
-ActAlert : icrash.concepts.primarytypes.classes.ctAlert
-" "
-@oracleVariable
-TheComCompany : icrash.environment.actComCompany
-" "
-@oracleVariable
-TheCoordinator : icrash.environment.actCoordinator
-" "
-@endOracleVariables
 @oracleConstraint
 "there is a communication company actor that received the message ieSmsSend(AdtPhoneNumber,AdtSMS)"
 @oracleConstraint
@@ -395,10 +305,6 @@ AMessage:lu.uni.lassy.messir.libraries.primitives.ptString
 @constraint
 "AMessage"
 @endConstraints
-@oracleVariable
-AMessage : lu.uni.lassy.messir.libraries.primitives.ptString
-" "
-@endOracleVariables
 @oracleConstraint
 ""
 @endOracleConstraints
@@ -448,10 +354,6 @@ AdtSMS:icrash.concepts.secondarytypes.datatypes.dtSMS
 @constraint
 "AdtSMS"
 @endConstraints
-@oracleVariable
-AdtSMS : icrash.concepts.secondarytypes.datatypes.dtSMS
-" "
-@endOracleVariables
 @oracleConstraint
 ""
 @endOracleConstraints
@@ -497,10 +399,6 @@ AMessage:lu.uni.lassy.messir.libraries.primitives.ptString
 @constraint
 "AMessage"
 @endConstraints
-@oracleVariable
-AMessage : lu.uni.lassy.messir.libraries.primitives.ptString
-" "
-@endOracleVariables
 @oracleConstraint
 ""
 @endOracleConstraints
@@ -530,10 +428,6 @@ AMessage:lu.uni.lassy.messir.libraries.primitives.ptString
 @constraint
 "AMessage"
 @endConstraints
-@oracleVariable
-AMessage : lu.uni.lassy.messir.libraries.primitives.ptString
-" "
-@endOracleVariables
 @oracleConstraint
 ""
 @endOracleConstraints
@@ -558,10 +452,6 @@ AMessage:lu.uni.lassy.messir.libraries.primitives.ptString
 @constraint
 "AMessage"
 @endConstraints
-@oracleVariable
-AMessage : lu.uni.lassy.messir.libraries.primitives.ptString
-" "
-@endOracleVariables
 @oracleConstraint
 ""
 @endOracleConstraints

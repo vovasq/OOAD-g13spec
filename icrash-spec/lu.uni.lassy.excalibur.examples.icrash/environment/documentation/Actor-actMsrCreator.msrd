@@ -2,9 +2,6 @@
 
 @description
 "Represents the creator stakeholder in charge of state and environment initialization."
-@operation icrash.environment.actMsrCreator.init
-" "
-@endOperations
 
 //input events
 //output events

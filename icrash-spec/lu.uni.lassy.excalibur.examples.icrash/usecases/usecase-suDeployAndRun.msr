@@ -81,7 +81,7 @@ package icrash.usecases.suDeployAndRun {
         executed instanceof subfunction 
               oeAlert("witness","2017:11:26","10:10:16","+3524666445252",
                       "49.627675:6.159590","3 cars involved in an accident."){
-                 ieSmsSend("+3524666445252","Your alert has been registered. Time of creation Crisis 2017/11/26 10:10:16") returned to tango
+                 ieSmsSend("+3524666445252","Your alert has been registered. We will handle it and keep you informed") returned to tango
               }
 //----------------------------------------------------
         theClock
@@ -112,7 +112,7 @@ package icrash.usecases.suDeployAndRun {
         steve
         executed instanceof subfunction
               oeSetCrisisHandler("1"){
-                ieSmsHumanNotifySend("+3524666445252","Your Crisis has been handled 2017/11/26 10:45:00") 
+                ieSmsSend("+3524666445252","The handling of your alert by our services is in progress !") 
                 returned to tango
                 ieMessage("You are now considered as handling the crisis !") 
                 returned to steve
@@ -133,7 +133,7 @@ package icrash.usecases.suDeployAndRun {
         executed instanceof subfunction 
               oeAlert("witness","2017:11:26","10:20:00","+3524666445000",
                       "49.627095:6.160251","A car crash just happened."){
-                 ieSmsSend("+3524666445000","Your alert has been registered. Time of creation Crisis 2017/11/26 10:20:00") returned to tango
+                 ieSmsSend("+3524666445000","Your alert has been registered. We will handle it and keep you informed") returned to tango
               }
 //----------------------------------------------------
         theClock
@@ -143,15 +143,13 @@ package icrash.usecases.suDeployAndRun {
         steve
         executed instanceof subfunction
               oeSetCrisisStatus("1","solved"){
-              	ieSmsHumanNotifySend("+3524666445252","Your Crisis has been solved 2017/11/26 12:45:00") 
-                returned to tango
                 ieMessage('The crisis status has been updated !')
                 returned to steve
               }
 //----------------------------------------------------
         steve
         executed instanceof subfunction
-              oeReportOnCrisis("1","3 victims sent to hospital, 2 cars ecacuated and 4 rescue unit mobilized"){
+              oeReportOnCrisis("1","3 victims sent to hospital, 2 cars evacuated and 4 rescue unit mobilized"){
                 ieMessage('The crisis comment has been updated !')
                 returned to steve
               }
@@ -159,8 +157,6 @@ package icrash.usecases.suDeployAndRun {
         steve
         executed instanceof subfunction
               oeCloseCrisis("1"){
-              	ieSmsHumanNotifySend("+3524666445252","Your Crisis has been closed 2017/11/26 12:46:00") 
-                returned to tango
                 ieMessage('The crisis is now closed !')
                 returned to steve
               }
@@ -215,7 +211,7 @@ package icrash.usecases.suDeployAndRun {
         executed instanceof subfunction 
               oeAlert("witness","2017:11:26","10:10:16","+3524666445252",
                       "49.627675:6.159590","3 cars involved in an accident."){
-                 ieSmsSend("+3524666445252","Your alert has been registered. Time of creation Crisis 2017/11/26 10:10:16") returned to tango
+                 ieSmsSend("+3524666445252","Your alert has been registered. We will handle it and keep you informed") returned to tango
               }
 //----------------------------------------------------
         theClock
@@ -262,7 +258,7 @@ package icrash.usecases.suDeployAndRun {
         steve
         executed instanceof subfunction
               oeSetCrisisHandler("1"){
-                ieSmsHumanNotifySend("+3524666445252","Your Crisis has been handled 2017/11/26 10:45:00") 
+                ieSmsSend("+3524666445252","The handling of your alert by our services is in progress !") 
                 returned to tango
                 ieMessage("You are now considered as handling the crisis !") 
                 returned to steve
@@ -283,7 +279,7 @@ package icrash.usecases.suDeployAndRun {
         executed instanceof subfunction 
               oeAlert("witness","2017:11:26","10:20:00","+3524666445000",
                       "49.627095:6.160251","A car crash just happened."){
-                 ieSmsSend("+3524666445000","Your alert has been registered. Time of creation Crisis 2017/11/26 10:20:00") returned to tango
+                 ieSmsSend("+3524666445000","Your alert has been registered. We will handle it and keep you informed") returned to tango
               }
 //----------------------------------------------------
         theClock
@@ -293,8 +289,6 @@ package icrash.usecases.suDeployAndRun {
         steve
         executed instanceof subfunction
               oeSetCrisisStatus("1","solved"){
-				ieSmsHumanNotifySend("+3524666445252","Your Crisis has been solved 2017/11/26 12:45:00") 
-                returned to tango
                 ieMessage('The crisis status has been updated !')
                 returned to steve
               }
@@ -309,8 +303,6 @@ package icrash.usecases.suDeployAndRun {
         steve
         executed instanceof subfunction
               oeCloseCrisis("1"){
-				ieSmsHumanNotifySend("+3524666445252","Your Crisis has been closed 2017/11/26 12:46:00") 
-                returned to tango
                 ieMessage('The crisis is now closed !')
                 returned to steve
               }

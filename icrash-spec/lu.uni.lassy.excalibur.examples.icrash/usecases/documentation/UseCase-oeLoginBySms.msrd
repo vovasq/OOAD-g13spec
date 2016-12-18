@@ -1,0 +1,27 @@
+/*
+@author Vovas
+@date Mon Dec 05 19:09:04 MSK 2016
+*/
+
+
+@@Use Case Subfunction icrash.usecases.subfunctions.oeLoginBySms
+@description " this subfunction is used to verify user after he enters right login and password"
+@parameter icrash.usecases.subfunctions.oeLoginBySms.AdtSmsCode 
+"contains code that was entered by user so system has to check"
+@endParameters
+@protocolCondition
+"
+"
+@endProtocolConditions
+@preCondition
+"
+"
+@endPreConditions
+@postCondition
+"
+"
+@endPostConditions
+@additionalInformation
+"
+none
+"

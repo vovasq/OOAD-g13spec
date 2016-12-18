@@ -459,13 +459,14 @@
   <semanticResources>platform:/resource/lu.uni.lassy.excalibur.standard.specification.libraries/library/documentation/PrimaryType-Primitive-ptReal.msrd</semanticResources>
   <semanticResources>platform:/resource/lu.uni.lassy.excalibur.standard.specification.libraries/library/documentation/PrimaryType-Primitive-ptString.msrd</semanticResources>
   <semanticResources>documentation/View-em-gv-02.msrd</semanticResources>
-  <semanticResources>concepts/documentation/SecondaryType-Datatype-dtDtSMSHumanNotify.msrd</semanticResources>
-  <semanticResources>documentation/View-cm-view8.msrd</semanticResources>
-  <semanticResources>documentation/View-cm-view7.msrd</semanticResources>
-  <semanticResources>documentation/View-cm-st-dt-lv-02.msrd</semanticResources>
-  <semanticResources>documentation/View-cm-st-dt-lv-04.msrd</semanticResources>
-  <semanticResources>concepts/documentation/SecondaryType-Datatype-dtSMSHumanNotify.msrd</semanticResources>
-  <semanticResources>concepts/documentation/Operation-dtSMSHumanNotify-is.msrd</semanticResources>
+  <semanticResources>environment/oeSendMessageToUser.msr</semanticResources>
+  <semanticResources>environment/documentation/Operation-actActivator-outactActivator-oeSendMessageToUser.msrd</semanticResources>
+  <semanticResources>environment/documentation/Operation-actAuthenticated-outactAuthenticated-oeLoginBySms.msrd</semanticResources>
+  <semanticResources>concepts/documentation/PrimaryType-Datatype-dtSmsCode.msrd</semanticResources>
+  <semanticResources>concepts/documentation/Operation-dtSmsCode-is.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCase-oeLoginBySms.msrd</semanticResources>
+  <semanticResources>documentation/View-uc-oeLoginBySms.msrd</semanticResources>
+  <semanticResources>operations/environment/environment-actAuthenticated-oeLoginBySms.msr</semanticResources>
   <ownedViews xmi:type="viewpoint:DView" xmi:id="_VxVZ4PWqEeSOM9Kfym77Zg">
     <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']"/>
   </ownedViews>

@@ -8,7 +8,8 @@ import icrash.environment
 
 Operation Model {
 
-operation: actAdministrator.outactAdministrator.oeAddCoordinator(AdtCoordinatorID:dtCoordinatorID, AdtLogin:dtLogin, AdtPassword:dtPassword):ptBoolean
+operation: actAdministrator.outactAdministrator.oeAddCoordinator(AdtCoordinatorID:dtCoordinatorID,
+	 AdtLogin:dtLogin, AdtPassword:dtPassword,AdtPhoneNumber:dtPhoneNumber):ptBoolean 
 {
 preP{
   let TheSystem: ctState in

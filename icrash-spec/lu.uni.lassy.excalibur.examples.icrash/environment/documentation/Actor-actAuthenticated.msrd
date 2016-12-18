@@ -2,15 +2,18 @@
 
 @description
 "abstract actor providing reusable input and output interfaces for actors that need to authenticate themselves."
-@operation icrash.environment.actAuthenticated.init
-" "
-@endOperations
 
 //input events
 @inputEvent icrash.environment.actAuthenticated.inactAuthenticated.ieMessage
 "allows for receiving general textual messages."
 
 @endInputEvents
+
+
+
+@outputEvent icrash.environment.actAuthenticated.outactAuthenticated.oeLoginBySms
+"sent request to check sms and to request access secured system operations."
+//
 
 //output events
 @outputEvent icrash.environment.actAuthenticated.outactAuthenticated.oeLogin

@@ -8,12 +8,7 @@ import icrash.concepts.primarytypes.datatypes
 	Concept Model {
 
 		Secondary Types {
-			
-			datatype dtSMSHumanNotify {
-				attribute value: ptString
-				operation is():ptBoolean
-			}
-			
+				
 			datatype dtSMS {
 				attribute value: ptString
 				operation is():ptBoolean

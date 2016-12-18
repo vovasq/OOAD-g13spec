@@ -1,0 +1,23 @@
+/*
+* @author Vovas
+* @date Wed Nov 23 16:50:38 MSK 2016
+*/
+
+package lu.uni.lassy.excalibur.examples.icrash.environment.actActivator.oeSendMessageToUser.messir.msr {
+
+import lu.uni.lassy.messir.libraries.primitives
+
+
+	Environment Model {
+
+	}
+	/*
+	Operation Model {
+		operation:actActivator.oeSendMessageToUser():ptBoolean{
+			
+			
+		}
+	}*/
+
+
+}
