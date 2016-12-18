@@ -9,7 +9,7 @@ import lu.uni.lassy.messir.libraries.calendar
 	Concept Model {
 		
 		Primary Types{
-		
+			
 			state class ctState {
 				attribute nextValueForAlertID:dtInteger
 				attribute nextValueForCrisisID:dtInteger
@@ -72,10 +72,8 @@ import lu.uni.lassy.messir.libraries.calendar
 				attribute id:dtPhoneNumber
 				attribute kind:etHumanKind
 				
-				operation init(
-										Aid:dtPhoneNumber ,
-										Akind:etHumanKind ):ptBoolean
-        operation isAcknowledged():ptBoolean
+				operation init(Aid:dtPhoneNumber, Akind:etHumanKind ):ptBoolean
+        		operation isAcknowledged(aEtCrisisStatus:etCrisisStatus):ptBoolean
 			}
 
 

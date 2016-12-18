@@ -5,6 +5,10 @@ icrash.environment.actCoordinator.outactCoordinator.oeSetCrisisStatus
 "the identification information used to determine the crisis"
 @parameter icrash.environment.actCoordinator.outactCoordinator.oeSetCrisisStatus.AetCrisisStatus
 "the new status value"
+@parameter icrash.operations.environment.actCoordinator.oeSetCrisisStatus.operationmodel.actCoordinator.outactCoordinator.oeSetCrisisStatus.AdtCrisisID
+" "
+@parameter icrash.operations.environment.actCoordinator.oeSetCrisisStatus.operationmodel.actCoordinator.outactCoordinator.oeSetCrisisStatus.AetCrisisStatus
+" "
 @endParameters
 @description
 "sent to define the handling status of a specific crisis."
@@ -24,6 +28,8 @@ icrash.environment.actCoordinator.outactCoordinator.oeSetCrisisStatus
 //postFunctional descriptions
 @postF 
 "the crisis status attribute of the crisis instance having the given id is replaced by the given one and the requesting actor is notified of this update."
+@postF
+"a message is sent to the communication company for any human related to an alert associated to the crisis. A human will receive as many messages as alerts he sent despite the fact that they might relate to the same crisis (i.e. one alert, one acknoledgement)."
 @endPostF
 
 //postProtocol descriptions

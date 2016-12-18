@@ -82,7 +82,7 @@ import icrash.environment
         returned to actCoordinator
       ieSendAnAlert(ActAlert)
         returned to actCoordinator
-      ieSmsSend(AdtPhoneNumber,AdtSMS)
+      ieSmsHumanNotifySend(AdtPhoneNumber,AdtSMS)
         returned to actComCompany
     }
   }    
