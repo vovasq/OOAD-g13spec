@@ -1,0 +1,70 @@
+package usecases.uciugSecurelyUseSystem {
+	import icrash.usecases.ugSecurelyUseSystem
+    import icrash.usecases.ugSecurelyUseSystem
+    import icrash.concepts.primarytypes.datatypes
+    import icrash.environment
+    import icrash.usecases.suGlobalCrisisHandling
+    import icrash.usecases.ugAdministrateTheSystem
+    import icrash.usecases.subfunctions
+
+	Use Case Model {
+		use case system usergoal ugSecurelyUseSystem() {	
+				actor actAuthenticated[primary,active]
+				actor actComCompany[secondary, active]
+					
+				reuse oeLogin[1..1]
+				reuse oeLoginBySms[1..1]
+				reuse oeLogout[1..1]
+			
+				step a: actAuthenticated 
+				     executes oeLogin
+				step b: actAuthenticated 
+				     executes oeLoginBySms
+				step c: actAuthenticated 
+				     executes oeLogout
+				
+				ordering constraint 
+				 "step (a) must always precede step (b)."
+				ordering constraint 
+					 "step (c) must be always only after (b)"
+	 
+		}
+	
+	
+//----------------------------------------------------
+//----------------------------------------------------
+	use case instance uciugSecurelyUseSystem: ugSecurelyUseSystem {
+    	  actors {
+        	theLogger : actAuthenticated
+        	tango : actComCompany
+      	}
+		use case steps {
+			
+			theLogger 
+				executed instanceof subfunction oeLogin("Loggerslogin", "Loggerspassword") {
+					
+				ieMessage("We have just sent an sms with code to your phone") returned to tango
+				ieSmsSend("Logger phone from base","generated code")returned to theLogger
+			}
+			
+			theLogger 
+				executed instanceof subfunction oeLoginBySms("generated code"){
+					ieMessage("You succesfully logged in!") returned to theLogger
+				}
+			
+			theLogger
+			 	executed instanceof subfunction oeLogout(){
+				
+					ieMessage("You are logged out ! Good Bye ...") returned to theLogger
+			}
+//			theLogger 
+//				executed instanceof subfunction oeLogin("wrong login", "right password"){
+//					ieMessage("Wrong password or login! Retry!") returned to theLogger			
+//				}
+
+		}
+		
+		
+		}
+	}  
+}

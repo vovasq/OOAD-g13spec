@@ -1,0 +1,16 @@
+/*
+@author Vovas
+@date Mon Dec 19 19:53:58 MSK 2016
+*/
+
+
+@@Secondary Type Datatype icrash.concepts.secondarytypes.datatypes.dtSMSHumanNotify
+@description "A datatype class that stores SMS messages that have been sent to humans to notify about the status of their crisis."
+@attribute
+icrash.concepts.secondarytypes.datatypes.dtSMSHumanNotify.value
+""
+@endAttributes
+@operation
+icrash.concepts.secondarytypes.datatypes.dtSMSHumanNotify.is
+""
+@endOperations

@@ -1,0 +1,41 @@
+@@Operation
+icrash.environment.actAuthenticated.outactAuthenticated.oeLogin
+//parameters
+@parameter icrash.environment.actAuthenticated.outactAuthenticated.oeLogin.AdtLogin
+"first information used to determine accessibility rights for the actual actor."
+@parameter icrash.environment.actAuthenticated.outactAuthenticated.oeLogin.AdtPassword
+"second information used to determine accessibility rights for the actual actor."
+@parameter icrash.operations.environment.actAuthenticated.operationmodel.actAuthenticated.outactAuthenticated.oeLogin.AdtLogin
+" "
+@parameter icrash.operations.environment.actAuthenticated.operationmodel.actAuthenticated.outactAuthenticated.oeLogin.AdtPassword
+" "
+@endParameters
+@description
+"sent to request authorization to request access secured system operations."
+
+//preProtocol descriptions
+@preP
+"the system is started"
+@preP
+"the actor is not already logged in ! (i.e. the associated ctAuthenticated instance is not considered logged)"
+@endPreP
+
+//preFunctional descriptions
+@preF
+"none "
+@endPreF
+
+//postFunctional descriptions
+@postF 
+"if the login and password provided by the actor is right we generate code"
+@postF
+"sent to comcompany code and users number to send it"
+//@postF
+//" set this actAutheticated.isright instance"
+@endPostF
+
+//postProtocol descriptions
+@postP 
+"if the authentication information is correct then the actor is known to be logged in ! (i.e. the associated ctAuthenticated instance with given login and password is considered logged)"
+// 
+@endPostP

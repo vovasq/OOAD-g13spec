@@ -1,0 +1,13 @@
+/*
+@author Vovas
+@date Mon Dec 19 19:50:26 MSK 2016
+*/
+
+
+@@view cm-st-dt-lv-02
+@model Concept
+@level Local
+@sublevel Secondary Datatype
+@number 10
+@description "shows the local view of the secondary types datatype types."
+@caption ""

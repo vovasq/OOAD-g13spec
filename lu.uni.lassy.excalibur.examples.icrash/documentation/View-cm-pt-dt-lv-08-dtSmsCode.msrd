@@ -1,0 +1,13 @@
+/*
+@author Vovas
+@date Mon Dec 19 00:13:20 MSK 2016
+*/
+
+
+@@view cm-pt-dt-lv-08-dtSmsCode
+@model Concept
+@level Local
+@sublevel Primary Datatype
+@number 9
+@description "it's vovas"
+@caption ""

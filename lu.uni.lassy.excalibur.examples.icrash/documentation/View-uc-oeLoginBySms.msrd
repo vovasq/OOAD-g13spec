@@ -1,0 +1,12 @@
+/*
+@author Vovas
+@date Mon Dec 05 19:37:57 MSK 2016
+*/
+
+
+@@view uc-oeLoginBySms
+@model Use-Case icrash.usecases.subfunctions.oeLoginBySms 
+@description "write something"
+@caption "her you write the caption"
+@scale MaxHeight
+//@orientation Landscape
