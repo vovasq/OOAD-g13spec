@@ -1,6 +1,5 @@
 package icrash.concepts.primarytypes.classes {
 	
-import lu.uni.lassy.messir.libraries.string	
 import icrash.concepts.primarytypes.datatypes
 import icrash.environment
 import lu.uni.lassy.messir.libraries.primitives
@@ -10,7 +9,7 @@ import lu.uni.lassy.messir.libraries.calendar
 	Concept Model {
 		
 		Primary Types{
-		
+			
 			state class ctState {
 				attribute nextValueForAlertID:dtInteger
 				attribute nextValueForCrisisID:dtInteger
@@ -62,20 +61,19 @@ import lu.uni.lassy.messir.libraries.calendar
 										Acomment:dtComment ):ptBoolean
 										
 				operation handlingDelayPassed():ptBoolean
-        		operation maxHandlingDelayPassed():ptBoolean
+        operation maxHandlingDelayPassed():ptBoolean
 				operation isSentToCoordinator(AactCoordinator:actCoordinator ):ptBoolean
 				operation isAllocatedIfPossible():ptBoolean
 			}
 			
 
+
 			class ctHuman role rnctHuman cardinality [0..*]{
 				attribute id:dtPhoneNumber
 				attribute kind:etHumanKind
 				
-				operation init(
-										Aid:dtPhoneNumber ,
-										Akind:etHumanKind ):ptBoolean
-        operation isAcknowledged():ptBoolean
+				operation init(Aid:dtPhoneNumber, Akind:etHumanKind ):ptBoolean
+        		operation isAcknowledged(aEtCrisisStatus:etCrisisStatus):ptBoolean
 			}
 
 
@@ -86,17 +84,10 @@ import lu.uni.lassy.messir.libraries.calendar
 				attribute login:dtLogin
 				attribute pwd: dtPassword
 				attribute vpIsLogged:ptBoolean
-				//our implementation
-				attribute isPassAndLoginRight : ptBoolean
-				attribute phoneNumber: dtPhoneNumber
-				// we have to create a new type for sms code
-				attribute code: dtSmsCode
-				 
 				
 				operation init(
 										Alogin:dtLogin ,
-										Apwd:dtPassword,
-										Aphone:dtPhoneNumber ):ptBoolean
+										Apwd:dtPassword ):ptBoolean
 			}
 			
 			class ctCoordinator 
@@ -109,8 +100,7 @@ import lu.uni.lassy.messir.libraries.calendar
 				operation init(
 										Aid:dtCoordinatorID ,
 										Alogin:dtLogin ,
-										Apwd:dtPassword,
-										Aphone:dtPhoneNumber ):ptBoolean
+										Apwd:dtPassword ):ptBoolean
 			}
 
 			class ctAdministrator 

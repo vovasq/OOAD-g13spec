@@ -8,14 +8,13 @@ import icrash.concepts.secondarytypes.datatypes
 import lu.uni.lassy.messir.libraries.primitives
 import lu.uni.lassy.messir.libraries.math
 import lu.uni.lassy.messir.libraries.calendar
-import lu.uni.lassy.messir.libraries.string
 
 import icrash.environment
 
   Use Case Model {
     
 //----------------------------------------------------
-  use case system subfunction oeAddCoordinator(AdtCoordinatorID:dtCoordinatorID, AdtLogin:dtLogin, AdtPassword:dtPassword, AdtPhoneNumber:dtPhoneNumber){
+  use case system subfunction oeAddCoordinator(AdtCoordinatorID:dtCoordinatorID, AdtLogin:dtLogin, AdtPassword:dtPassword){
     actor actAdministrator[primary,active]
     returned messages {
       ieCoordinatorAdded() returned to actAdministrator
@@ -83,7 +82,7 @@ import icrash.environment
         returned to actCoordinator
       ieSendAnAlert(ActAlert)
         returned to actCoordinator
-      ieSmsSend(AdtPhoneNumber,AdtSMS)
+      ieSmsHumanNotifySend(AdtPhoneNumber,AdtSMS)
         returned to actComCompany
     }
   }    
@@ -94,14 +93,6 @@ import icrash.environment
       ieMessage(AMessage) returned to actAuthenticated
 	  }
   }   
-  
-  //----------------------------------------------------
-  use case system subfunction oeLoginBySms(AdtSmsCode:dtSmsCode) {
-    actor actAuthenticated[primary,active]
-    returned messages {
-      ieMessage(AMessage) returned to actAuthenticated
-	  }
-  } 
 //----------------------------------------------------
   use case system subfunction oeLogout() {
     actor actAuthenticated[primary,active]
@@ -131,7 +122,7 @@ import icrash.environment
   use case system subfunction oeSollicitateCrisisHandling() {
     actor actActivator[primary,proactive]
     actor actCoordinator[secondary,passive,multiple]
-    actor actAdministrator[secondary,passive]	
+    actor actAdministrator[secondary,passive]
     returned messages {
       ieMessage(AMessage) returned to actCoordinator
       //ieMessage(AMessage) returned to actAdministrator

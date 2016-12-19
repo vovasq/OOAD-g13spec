@@ -9,19 +9,8 @@
 @attribute icrash.concepts.primarytypes.classes.ctAuthenticated.pwd
 "a key for authentication."
 
-// new attribute for sms based 
-
-@attribute icrash.concepts.primarytypes.classes.ctAuthenticated.isPassAndLoginRight
-" used to determine if the user has entered the right login and password"
-
-@attribute icrash.concepts.primarytypes.classes.ctAuthenticated.code
-" sms code that is sent to user"
-
 @attribute icrash.concepts.primarytypes.classes.ctAuthenticated.vpIsLogged
 "used to determine the access status."
-
-@attribute icrash.concepts.primarytypes.classes.ctAuthenticated.phoneNumber
-"phone number that is needed  to send sms code to user of this phone"
 
 @endAttributes
 

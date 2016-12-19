@@ -27,7 +27,7 @@ endif
 }
 prolog{"src/Operations/Concepts/PrimaryTypesClasses/PrimaryTypesClasses-ctHuman-init.pl"}
 }
-operation: icrash.concepts.primarytypes.classes.ctHuman.isAcknowledged():ptBoolean{
+operation: icrash.concepts.primarytypes.classes.ctHuman.isAcknowledged(aEtCrisisStatus:etCrisisStatus):ptBoolean{
 prolog{"src/Operations/Concepts/PrimaryTypesClasses/PrimaryTypesClasses-ctHuman-isAcknowledged.pl"}
 }
 }

@@ -6,8 +6,6 @@ import icrash.concepts.secondarytypes.datatypes
 import lu.uni.lassy.messir.libraries.primitives
 import lu.uni.lassy.messir.libraries.math
 import lu.uni.lassy.messir.libraries.calendar
-import lu.uni.lassy.messir.libraries.string
-
 
 	Environment Model { 
 
@@ -30,12 +28,11 @@ import lu.uni.lassy.messir.libraries.string
 			operation init():ptBoolean
 
 			output interface outactAdministrator{
-				//operation oeAddCoordinator(AdtCoordinatorID:dtCoordinatorID, AdtLogin:dtLogin, AdtPassword:dtPassword, AdtPhoneNumber:dtPhoneNumber)
+				
 				operation oeAddCoordinator(
 											AdtCoordinatorID:dtCoordinatorID ,
 											AdtLogin:dtLogin , 
-											AdtPassword:dtPassword,
-											AdtPhoneNumber:dtPhoneNumber ):ptBoolean
+											AdtPassword:dtPassword ):ptBoolean
 											
 				operation oeDeleteCoordinator(
 											AdtCoordinatorID:dtCoordinatorID ):ptBoolean
@@ -80,7 +77,6 @@ import lu.uni.lassy.messir.libraries.string
 				operation ieSendAnAlert(ActAlert:ctAlert ):ptBoolean
 				operation ieSendACrisis(ActCrisis:ctCrisis ):ptBoolean
 	 		}
-	 		
 		}
 		
 		actor actComCompany role rnactComCompany cardinality [0..*]{
@@ -99,9 +95,8 @@ import lu.uni.lassy.messir.libraries.string
 			}
 			
 			input interface inactComCompany{
-				operation ieSmsSend(AdtPhoneNumber:dtPhoneNumber , 
-														AdtSMS:dtSMS 
-														):ptBoolean
+				operation ieSmsSend(AdtPhoneNumber:dtPhoneNumber, AdtSMS:dtSMS):ptBoolean
+				operation ieSmsHumanNotifySend(AdtPhoneNumber:dtPhoneNumber, AdtSMSHumanNotify:dtSMSHumanNotify):ptBoolean									
 	 		}
 		}
 
@@ -111,7 +106,6 @@ import lu.uni.lassy.messir.libraries.string
 
 			output interface outactAuthenticated{
 				operation oeLogin(AdtLogin:dtLogin , AdtPassword:dtPassword ):ptBoolean
-				operation oeLoginBySms(AdtSmsCode: dtSmsCode) : ptBoolean
 				operation oeLogout():ptBoolean
 			}
 			
@@ -127,8 +121,6 @@ import lu.uni.lassy.messir.libraries.string
 			output interface outactActivator{
 				proactive operation oeSollicitateCrisisHandling():ptBoolean
 				proactive operation oeSetClock(AcurrentClock:dtDateAndTime ):ptBoolean
-//				proactive operation oeSendMessageToUser():
-						
 			}
 			
 			input interface inactActivator{

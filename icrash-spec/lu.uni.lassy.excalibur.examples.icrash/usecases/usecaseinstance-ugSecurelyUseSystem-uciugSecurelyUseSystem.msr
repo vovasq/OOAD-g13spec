@@ -24,14 +24,6 @@ package usecases.uciugSecurelyUseSystem {
 //-----------------------------
         bill
         executed instanceof subfunction
-              oeLoginBySms("generated sms code"){
-                ieMessage('We have just sent an sms with code to your phone! Input it in textview...') 
-                returned to bill
-              }
-
-//-----------------------------
-        bill
-        executed instanceof subfunction
               oeLogout{
                 ieMessage('You are logged out ! Good Bye ...') returned to bill
               }
